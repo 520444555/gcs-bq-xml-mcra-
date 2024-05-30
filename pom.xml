@@ -1,0 +1,30 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.hsbc.wpb.fdr.mcra</groupId>
+    <artifactId>mcra</artifactId>
+    <version>1.1</version>
+    <properties>
+        <sonar.sources>src/main</sonar.sources>
+        <sonar.coverage.exclusions>
+            src/main/main.py,
+            src/main/processors/file_data.py,
+            src/main/processors/getbucket.py,
+            src/main/options/MyOptions.py
+        </sonar.coverage.exclusions>
+        <sonar.tests>src/test</sonar.tests>
+<sonar.language>py</sonar.language>
+        <sonar.python.version>3.9</sonar.python.version>
+        <sonar.python.coverage.reportPaths>coverage.xml</sonar.python.coverage.reportPaths>
+        <sonar.python.xunit.reportPath>utest-reports/*.xml</sonar.python.xunit.reportPath>
+        <sonar.issue.ignore.multicriteria>e1,e2</sonar.issue.ignore.multicriteria>
+        <sonar.issue.ignore.multicriteria.e1.ruleKey>
+            python:S1192
+        </sonar.issue.ignore.multicriteria.e1.ruleKey>
+        <sonar.issue.ignore.multicriteria.e1.resourceKey>src/main/processors/load_table.py</sonar.issue.ignore.multicriteria.e1.resourceKey>
+        <sonar.issue.ignore.multicriteria.e2.ruleKey>
+            python:S3776
+        </sonar.issue.ignore.multicriteria.e2.ruleKey>
+        <sonar.issue.ignore.multicriteria.e2.resourceKey>src/main/processors/load_table.py</sonar.issue.ignore.multicriteria.e2.resourceKey>
+    </properties>
+</project>
