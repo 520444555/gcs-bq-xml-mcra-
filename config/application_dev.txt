@@ -1,0 +1,45 @@
+--no_use_public_ips
+
+--service_account_email ss-11677890-mcrahase@hsbc-10436866-dfasp-dev.iam.gserviceaccount.com
+
+--job_name ihubxmltobq
+
+--staging_location gs://df-11677890-mcrahase-dev/pipelines/gcs-bq-ihubmcra/staging/
+
+--project hsbc-10436866-dfasp-dev
+
+--region asia-east2
+
+--subnet regions/asia-east2/subnetworks/dataflow-asia-east2
+
+--runner DataFlowRunner
+
+--machine_type n2-standard-4
+
+--max_num_workers 15
+
+--autoscaling_algorithm THROUGHPUT_BASED
+
+--num_workers 1
+
+--disk_size_gb 100
+
+--temp_location gs://df-11677890-mcrahase-dev/xmltobq/temp/
+
+--dataflow_kms_key projects/hsbc-6320774-kms-dev/locations/global/keyRings/hsbc-10436866-dfasp-dev/cryptoKeys/dataFlow
+
+--save_main_session
+
+--setup_file ./src/main/setup.py
+
+--requirements_file ./src/main/requirements.txt
+
+--template_location gs://df-11677890-mcrahase-dev/mcra_template
+
+--logging_mode DEBUG
+
+--dataset hsbc-10436866-dfasp-dev.MCRA_TU_HASE_AUTH_VIEWS_PII_DEV
+
+
+
+
